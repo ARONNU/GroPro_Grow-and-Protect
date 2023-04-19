@@ -1,3 +1,11 @@
+//Smart Automatic Plant Irrigation System : Grow and Protect (SAPLINS:GroPro)
+------------------------------
+//Moisture Sensor
+//(Moisture Sensor)
+//Original code from:
+//(https://arduinogetstarted.com/tutorials/arduino-soil-moisture-sensor)
+
+
 #define AOUT_PIN A0 // Arduino pin that connects to AOUT pin of moisture sensor
 #define THRESHOLD 100 // CHANGE YOUR THRESHOLD HERE
 
@@ -19,7 +27,3 @@ void loop() {
 
   delay(500);
 }
-
-/* This code was created by ArduinoGetStarted.com
- * This example code is in the public domain
- * Tutorial page: https://arduinogetstarted.com/tutorials/arduino-soil-moisture-sensor/
