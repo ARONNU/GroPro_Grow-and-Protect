@@ -1,0 +1,36 @@
+//Smart Automatic Plant Irrigation System : Grow and Protect (SAPLINS:GroPro)
+------------------------------
+//Float Sensor
+//(Float sensor switch for the water reservior)
+//Original code from:
+//(https://arduinogetstarted.com/tutorials/arduino-switch)
+------------------------------
+//include the library for the float sensor switch
+#include <ezButton.h>
+
+//create ezButton object that attach to pin 7
+ezButton toggleSwitch(7);
+
+void setup() {
+	//initialize serial
+  	Serial.begin(9600);
+  	//set debounce time to 50 milliseconds
+  	toggleSwitch.setDebounceTime(50); 
+}
+
+void loop() {
+  toggleSwitch.loop(); 
+  	//set the switch to on
+  	if (toggleSwitch.isPressed())
+    	Serial.println("The switch: OFF -> ON");
+
+    //set the switch to off
+  	if (toggleSwitch.isReleased())
+    	Serial.println("The switch: ON -> OFF");
+
+  	int state = toggleSwitch.getState();
+  	if (state == HIGH)
+    	Serial.println("The switch: OFF");
+  	else
+    	Serial.println("The switch: ON");
+}
