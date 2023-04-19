@@ -1,0 +1,37 @@
+//Smart Automatic Plant Irrigation System : Grow and Protect (SAPLINS:GroPro)
+------------------------------
+//LCD I2C 
+//(LCD for irrigation monitoring)
+//Original code from:
+//(https://arduinogetstarted.com/tutorials/arduino-lcd-i2c)
+------------------------------
+//include the library for the LCD
+#include <LiquidCrystal_I2C.h>
+
+//declare LiquidCrystal_I2C object with I2C address
+//address 0x27, 16 column and 2 rows
+LiquidCrystal_I2C lcd(0x27, 16, 2); 
+
+void setup()
+{
+	//initialize the LCD
+	lcd.init(); 
+
+	//open the backlight
+	lcd.backlight();
+} 
+
+void loop()
+{
+  //clear display
+  lcd.clear(); 
+
+  //move cursor (column_index, row_index)               
+  lcd.setCursor(0, 0);        
+
+  //print message
+  lcd.print("Test Text hehe uwu");       
+
+  //display for 2 seconds
+  delay(2000);
+}
