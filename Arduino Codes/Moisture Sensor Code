@@ -1,0 +1,25 @@
+#define AOUT_PIN A0 // Arduino pin that connects to AOUT pin of moisture sensor
+#define THRESHOLD 100 // CHANGE YOUR THRESHOLD HERE
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int value = analogRead(AOUT_PIN); // read the analog value from sensor
+
+  if (value < THRESHOLD)
+    Serial.print("The soil is DRY (");
+  else
+    Serial.print("The soil is WET (");
+
+  Serial.print(value);
+  Serial.println(")");
+
+
+  delay(500);
+}
+
+/* This code was created by ArduinoGetStarted.com
+ * This example code is in the public domain
+ * Tutorial page: https://arduinogetstarted.com/tutorials/arduino-soil-moisture-sensor/
