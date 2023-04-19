@@ -1,29 +1,41 @@
 //Smart Automatic Plant Irrigation System : Grow and Protect (SAPLINS:GroPro)
 ------------------------------
-//Moisture Sensor
-//(Moisture Sensor)
+//Soil Moisture Sensor
+//(Sensor to identify the moisture level of the soil, digital)
 //Original code from:
 //(https://arduinogetstarted.com/tutorials/arduino-soil-moisture-sensor)
+------------------------------
+// Define the analog pin for the soil moisture sensor
+int soilMoisturePin = A0;
 
-
-#define AOUT_PIN A0 // Arduino pin that connects to AOUT pin of moisture sensor
-#define THRESHOLD 100 // CHANGE YOUR THRESHOLD HERE
+// Define the three moisture levels
+int type1 = 25;
+int type2 = 50;
+int type3 = 75;
 
 void setup() {
+  // Initialize serial communication
   Serial.begin(9600);
 }
 
 void loop() {
-  int value = analogRead(AOUT_PIN); // read the analog value from sensor
+  // Read the analog value from the soil moisture sensor
+  int sensorValue = analogRead(soilMoisturePin);
 
-  if (value < THRESHOLD)
-    Serial.print("The soil is DRY (");
-  else
-    Serial.print("The soil is WET (");
+  // Determine the moisture level based on the sensor value
+  String moistureLevel;
+  if (sensorValue >= type1) {
+    moistureLevel = "25";
+  } else if (sensorValue >= type2) {
+    moistureLevel = "50";
+  } else if (sensorValue >= type3) {
+    moistureLevel = "75";
+  }
 
-  Serial.print(value);
-  Serial.println(")");
+  // Print the moisture level to the serial monitor
+  Serial.print("Moisture Level: ");
+  Serial.println(moistureLevel);
 
-
-  delay(500);
+  //wait for 10 seconds
+  delay(1000);
 }
