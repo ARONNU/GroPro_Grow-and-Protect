@@ -1,2 +1,6 @@
 # Automatic-Irrigation-System-with-Object-Detection
-This project utilizes a raspberry pi 4 B (For Object Detection) and an Arduino Mega 2560 (For Automatic Irrigation))
+This project utilizes a raspberry pi 4 B (For Object Detection) and an Arduino Mega 2560 (For Automatic Irrigation).
+
+> Requirements(Object Detection):
+
+> Requirements(Automatic Irrigation):
