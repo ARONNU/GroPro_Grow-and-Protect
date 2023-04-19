@@ -1,0 +1,60 @@
+//Smart Automatic Plant Irrigation System : Grow and Protect (SAPLINS:GroPro)
+------------------------------
+//Servo Motor
+(Motor for Sprinkler)
+//Original code from:
+//(https://arduinogetstarted.com/tutorials/arduino-servo-motor)
+------------------------------
+//include the library for the servo motor
+#include <Servo.h> 
+
+//declare a servo object
+Servo myServo;
+
+//set variable for servo position
+int pos = 0;
+
+//assign move time to 5 seconds
+unsigned long MOVING_TIME = 5000;
+unsigned long moveStartTime;
+
+//assign start and stop angle
+int startAngle = 0;
+int stopAngle  = 180;
+
+void setup() {
+	//set the control pin of Arduino
+	//n is the pin number
+	myServo.attach(n);
+
+	//set to start moving
+	moveStartTime = millis();
+
+	//set desired angle for the servo motor
+	myServo.write(180);
+}
+
+void loop() {
+	//rotate from 0 degrees to 180 degrees, in steps of 60
+	for (pos = 0; pos <= 180; pos += 60) {
+		//position servo to initial position
+	    servo.write(pos);    
+	    //wait 10ms for the servo to reach the position                
+	    delay(10);
+  	}
+
+  	//rotate from 180 degrees to 0 degrees, in steps of 60
+	for (pos = 180; pos >= 0; pos -= 60) { 
+    	//position servo to initial position
+	    servo.write(pos);    
+	    //wait 10ms for the servo to reach the position                
+	    delay(10);
+  	}
+
+  	unsigned long progress = millis() - moveStartTime;
+
+  	if (progress <= MOVING_TIME) {
+    	long angle = map(progress, 0, MOVING_TIME, startAngle, stopAngle);
+    	myServo.write(angle); 
+    }
+}

@@ -1,0 +1,48 @@
+//Smart Automatic Plant Irrigation System : Grow and Protect (SAPLINS:GroPro)
+------------------------------
+//Motion Sensor
+//(Initial Pest Control System)
+//Original code from:
+//(https://arduinogetstarted.com/tutorials/arduino-motion-sensor-led)
+//(https://arduinogetstarted.com/tutorials/arduino-motion-sensor)
+------------------------------
+//connect Arduino pin to output pin of motion sensor
+const int MOTION_SENSOR_PIN = 7;  
+
+//connect Arduino pin to LED_PIN pin of motion sensor
+const int LED_PIN = 3;
+
+//initialize the current and previous state of motion sensor pin
+int motionStateCurrent = LOW; 
+int motionStatePrevious = LOW; 
+
+void setup() {
+	//initialize serial
+  	Serial.begin(9600);
+
+  	//set arduino pin to input and output mode
+  	pinMode(MOTION_SENSOR_PIN, INPUT); 
+	pinMode(LED_PIN, OUTPUT);     
+}
+
+void loop() {
+	//store old state
+  	motionStatePrevious = motionStateCurrent;
+  	//read new state
+  	motionStateCurrent  = digitalRead(MOTION_SENSOR_PIN);
+
+  	// pin state change
+  	if (motionStatePrevious == LOW && motionStateCurrent == HIGH) { 
+    	Serial.println("Motion detected!");
+    	//turn on
+    	digitalWrite(LED_PIN, HIGH);
+  	}
+
+  	else
+  	// pin state change: HIGH -> LOW
+  	if (motionStatePrevious == HIGH && motionStateCurrent == LOW) { 
+    	Serial.println("Motion stopped!");
+    	//turn off
+    	digitalWrite(LED_PIN, LOW);  
+  	}
+}

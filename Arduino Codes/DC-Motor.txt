@@ -1,0 +1,16 @@
+//Smart Automatic Plant Irrigation System : Grow and Protect (SAPLINS:GroPro)
+------------------------------
+//DC Motor
+(Motor for Water Pump)
+//Original code from:
+//(https://arduinogetstarted.com/tutorials/arduino-dc-motor)
+------------------------------
+//connect the Arduino pin to ENA
+//generate PWM signal to ENA pin
+//speed is a value from 0 to 255
+analogWrite(ENA_PIN, speed);
+
+//control 
+digitalWrite(IN1_PIN, HIGH); 
+digitalWrite(IN2_PIN, LOW); 
+
