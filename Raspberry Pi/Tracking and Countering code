@@ -54,3 +54,23 @@ tracker = EuclideanDistTracker()
 objects_rect = [(10, 10, 20, 20), (30, 30, 40, 40), (50, 50, 60, 60)]
 objects_bbs_ids, last_value = tracker.update(objects_rect)
 print(last_value)
+
+#For serialization of raspberry pi to arduino (need to editdata to just get the last output number)
+import serial
+import time
+
+if __name__ == '__main__':
+    ser = serial.Serial('/dev/ttyACM1',9600, timeout=1)
+    ser.flush()
+    
+    while True:
+        ser.write(b"red\n")
+        time.sleep(1)
+        ser.write(b"white\n")
+        time.sleep(1)
+        ser.write(b"blue\n")
+        time.sleep(1)
+        ser.write(b"all\n")
+        time.sleep(1)
+        ser.write(b"off\n")
+        time.sleep(1)
