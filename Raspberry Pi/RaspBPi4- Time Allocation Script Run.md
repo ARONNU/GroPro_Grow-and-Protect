@@ -1,4 +1,4 @@
-#Using the `cron` scheduler to execute a script automatically at a specific time of the day. 
+# Using the `cron` scheduler to execute a script automatically at a specific time of the day. 
 Here's an example code that prints "Hello, world!" every day at 10:30 AM:
 
 1. Create a new Python script:
