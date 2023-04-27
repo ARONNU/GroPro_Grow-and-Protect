@@ -1,0 +1,2 @@
+0 aphids
+1 whiteflies
