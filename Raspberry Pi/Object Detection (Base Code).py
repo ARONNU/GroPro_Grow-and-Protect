@@ -39,6 +39,7 @@ def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
   # Variables to calculate FPS
   counter, fps = 0, 0
   start_time = time.time()
+  send_count = 0
 
   # Start capturing video input from the camera
   cap = cv2.VideoCapture(camera_id)
@@ -84,7 +85,9 @@ def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
 
     # Draw keypoints and edges on input image
     image = utils.visualize(image, detection_result)
-
+        if image is not None:
+                send_count += 1
+                
     # Calculate the FPS
     if counter % fps_avg_frame_count == 0:
       end_time = time.time()
@@ -104,7 +107,10 @@ def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
 
   cap.release()
   cv2.destroyAllWindows()
-
+  
+# Open the file for writing
+with open('counter.txt', 'w') as f:
+    f.write(str(num_objects))
 
 def main():
   parser = argparse.ArgumentParser(
@@ -113,7 +119,7 @@ def main():
       '--model',
       help='Path of the object detection model.',
       required=False,
-      default='efficientdet_lite0.tflite')
+      default='pest_counter_model_v1.tflite')
   parser.add_argument(
       '--cameraId', help='Id of camera.', required=False, type=int, default=0)
   parser.add_argument(
