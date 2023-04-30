@@ -35,4 +35,4 @@ Now the script will automatically run every day at 4:30 AM. You can modify the s
 
 This will run the script at the start of every hour.
 
-**side note: add the time for the Pest_Detection.py and Audio_Detection.py so that it will be opened automatically every said time.
+**side note: add the time for the Pest_Detection.py and Audio_Detect.py so that it will be opened automatically every said time. (Preferrable time is morning when pests and sounds are abundant)
