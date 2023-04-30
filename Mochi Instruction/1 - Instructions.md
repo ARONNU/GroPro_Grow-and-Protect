@@ -1,6 +1,14 @@
 # Mochi Step by step guide 
-Guide for Mochi after she downloaded the Mochi Instruction Folder.
+Guide for Mochi.
+first clone the repository and just get the Mochi Instruction folder by copying the code below to the raspberry command prompt :
+
+```
+git clone https://github.com/ARONNU/GroPro_Grow-and-Protect.git
+```
+
 Then execute the Pest_Detection.py and Audio_Detect.py, after doing so check if there are values in the counter.txt and sound_count.txt (update me)
+
+
 
 ## Raspberry pi executing a code on a specific time using cron
 
