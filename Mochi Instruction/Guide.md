@@ -36,3 +36,26 @@ Now the script will automatically run every day at 4:30 AM. You can modify the s
 This will run the script at the start of every hour.
 
 **side note: add the time for the Pest_Detection.py and Audio_Detect.py so that it will be opened automatically every said time. (Preferrable time is morning when pests and sounds are abundant)
+
+##Setting up the arduino to receive the data from arduino_transfer.py
+Upload the Arduino code: Write a program on the Arduino Mega 2560 to receive the data from the Raspberry Pi and take the appropriate action. Here is some sample code:
+
+   ```
+   void setup() {
+     Serial.begin(9600); // initialize serial communication
+   }
+
+   void loop() {
+     if (Serial.available()) { // if data is available on the serial port
+       String message = Serial.readString(); // read the message
+       Serial.println(message); // print the message to the Serial Monitor
+     }
+   }
+   ```
+
+   In the above code, the Arduino Mega 2560 waits for data to be received on the serial port, and when data is available, it reads the message and prints it to the Serial Monitor.
+   
+  Change the code so that it can get the values from arduino_transfer.py to the thresholds that will connect the presticide's thresholds:
+Threshold 1 = 20 - 49
+Threshold 2 = 50 - 100
+Threshold 3 = 100+
