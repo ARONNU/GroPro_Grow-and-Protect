@@ -1,5 +1,6 @@
 # Mochi Step by step guide 
-Guide for Mochi after she downloaded the > Mochi Instruction Folder
+Guide for Mochi after she downloaded the Mochi Instruction Folder.
+Then execute the Pest_Detection.py and Audio_Detect.py, after doing so check if there are values in the counter.txt and sound_count.txt (update me)
 
 ## Raspberry pi executing a code on a specific time using cron
 
