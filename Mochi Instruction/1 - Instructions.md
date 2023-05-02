@@ -8,7 +8,7 @@ git clone https://github.com/ARONNU/GroPro_Grow-and-Protect.git
 
 Then execute the Pest_Detection.py and Audio_Detect.py, after doing so check if there are values in the counter.txt and sound_count.txt (update me)
 The instructions below is for automation and arduino data receiving from the raspberry pi.
----------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## Raspberry pi executing a code on a specific time using cron
 
