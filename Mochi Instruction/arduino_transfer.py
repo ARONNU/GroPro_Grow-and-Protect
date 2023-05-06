@@ -12,7 +12,7 @@ if vis_count >= 25 & <= 40:
 
 
 # configure serial port
-ser = serial.Serial('/dev/ttyUSB0', 9600) # replace '/dev/ttyUSB0' with the appropriate serial port
+ser = serial.Serial("/dev/ttyACM0", 115200, timeout=1) # or '/dev/ttyUSB0' with the appropriate serial port, The Current USB Port is for the USB 3 Upper port (Blue)
 
 # send data to Arduino
 send_count = 0
