@@ -7,7 +7,7 @@ with open('counter.txt', 'r') as file:
 with open('sound_count.txt', 'r') as file:
     aud_count = int(file.read().strip())
 
-if vis_count >= 25 & <= 40:
+visual = vis_count / 20
 
 
 
