@@ -87,9 +87,12 @@ def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
     image = utils.visualize(image, detection_result)
     if image is not None:
       send_count += 1
+    # Open the file for writing
+    with open('counter.txt', 'w') as f:
+      f.write(str(num_objects))
                 
     # Calculate the FPS
-    if counter % fps_avg_frame_count == 0:
+    if counter % fps_avg_frame_count == 0
       end_time = time.time()
       fps = fps_avg_frame_count / (end_time - start_time)
       start_time = time.time()
@@ -108,9 +111,6 @@ def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
   cap.release()
   cv2.destroyAllWindows()
   
-# Open the file for writing
-with open('counter.txt', 'w') as f:
-    f.write(str(num_objects))
 
 def main():
   parser = argparse.ArgumentParser(
