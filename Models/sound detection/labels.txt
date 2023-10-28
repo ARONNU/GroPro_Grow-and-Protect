@@ -1,0 +1,3 @@
+0 Background Noise
+1 not pest
+2 pest
