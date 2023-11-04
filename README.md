@@ -14,3 +14,5 @@ This project utilizes a raspberry pi 4 B (For Pest Detection) and an Arduino Meg
 - Battery or Any Power Supply
 - Moisture Sensor
 
+More Details:
+https://docs.google.com/document/d/1WE9Bw7Zd7AkqZZmc3qSffpCe5do_rDhPJyPNbGJgwL4/edit?usp=sharing
