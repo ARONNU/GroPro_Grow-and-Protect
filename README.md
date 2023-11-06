@@ -16,3 +16,5 @@ This project utilizes a raspberry pi 4 B (For Pest Detection) and an Arduino Meg
 
 More Details:
 https://docs.google.com/document/d/1WE9Bw7Zd7AkqZZmc3qSffpCe5do_rDhPJyPNbGJgwL4/edit?usp=sharing
+More model:
+https://drive.google.com/file/d/1gefZwf_GmMGh-bZVz9mq8LYkUJDwYJgG/view?fbclid=IwAR2veIq5dnoWgiCPqFp0OTHKSLDEP26a-efIjBWXrUqZc7enaQfWzYsi6X8
