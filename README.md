@@ -18,3 +18,6 @@ More Details:
 https://docs.google.com/document/d/1WE9Bw7Zd7AkqZZmc3qSffpCe5do_rDhPJyPNbGJgwL4/edit?usp=sharing
 More model:
 https://drive.google.com/file/d/1gefZwf_GmMGh-bZVz9mq8LYkUJDwYJgG/view?fbclid=IwAR2veIq5dnoWgiCPqFp0OTHKSLDEP26a-efIjBWXrUqZc7enaQfWzYsi6X8
+
+More:
+https://drive.google.com/drive/folders/1MRZpWs1MggmslozIlQyP4DiTlYuwcGz0?usp=drive_link
